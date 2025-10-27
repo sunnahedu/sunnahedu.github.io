@@ -1,10 +1,10 @@
 // js/firebase-app.js
-// Import Firebase modules from CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, FacebookAuthProvider } 
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// Your Firebase configuration (replace with your own)
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCRN1dnss4N7SCZYXUjM-CuYo6TSGV92zQ",
   authDomain: "sunnahedu.github.io",
@@ -18,6 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app); // <-- export this
 
-// Export app and auth for other JS files
-export { app, auth, GoogleAuthProvider, FacebookAuthProvider };
+// Export for other modules
+export { app, auth, db, GoogleAuthProvider, FacebookAuthProvider };
