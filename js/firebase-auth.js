@@ -1,5 +1,5 @@
 // js/firebase-auth.js
-import { auth, GoogleAuthProvider, FacebookAuthProvider, app } from "./firebase-app.js";
+import { auth, db, GoogleAuthProvider, FacebookAuthProvider, app } from "./firebase-app.js";
 import { signInWithPopup, onAuthStateChanged, signOut } 
   from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import { getFirestore, doc, getDoc } 
@@ -59,3 +59,4 @@ onAuthStateChanged(auth, async (user) => {
     await checkPaymentAndRedirect(user);
   }
 });
+
