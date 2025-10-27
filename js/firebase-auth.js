@@ -1,12 +1,9 @@
 // js/firebase-auth.js
-import { auth, db, GoogleAuthProvider, FacebookAuthProvider, app } from "./firebase-app.js";
+import { auth, db, GoogleAuthProvider, FacebookAuthProvider } from "./firebase-app.js";
 import { signInWithPopup, onAuthStateChanged, signOut } 
   from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getFirestore, doc, getDoc } 
+import { doc, getDoc } 
   from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-
-// Initialize Firestore
-const db = getFirestore(app);
 
 // Get DOM elements
 const googleBtn = document.getElementById("googleLogin");
@@ -59,4 +56,3 @@ onAuthStateChanged(auth, async (user) => {
     await checkPaymentAndRedirect(user);
   }
 });
-
