@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard - Islamic Online Learning</title>
+<link rel="stylesheet" href="css/style.css" />
+<script type="module" src="js/firebase-app.js"></script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="dashboard-container">
+  <h1>Welcome, <span id="userName"></span></h1>
+  <img id="userPhoto" alt="Profile" />
+  <p id="paymentStatus" style="font-weight:bold; margin:1rem 0;"></p>
+  <h2>Your Courses</h2>
+  <ul>
+    <li><a href="courses/course1.html">Course 1: Basics of Islam</a></li>
+    <li><a href="courses/course2.html">Course 2: Advanced Tafsir</a></li>
+  </ul>
+  <button id="logoutBtn" class="btn logout">Logout</button>
+</div>
+</body>
+</html>
