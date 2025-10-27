@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container, .login-container, .dashboard-container, .course-container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+h1, h2 { color: #333; }
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover { background: #005ecc; }
+
+.btn.google { background: #db4437; }
+.btn.facebook { background: #4267B2; }
+.btn.logout { background: #333; }
+
+img { width: 100px; height: 100px; border-radius: 50%; margin: 1rem 0; }
+
+#paymentStatus {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  background-color: #e0ffe0;
+}
+
+.dashboard-container ul { list-style-type: none; padding: 0; }
+.dashboard-container li { margin: 0.5rem 0; }
+.dashboard-container a { text-decoration: none; color: #0077ff; font-weight: bold; }
+.dashboard-container a:hover { text-decoration: underline; }
