@@ -1,6 +1,7 @@
+// js/firebase-app.js
 // Import Firebase modules from CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } 
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider } 
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 // Your Firebase configuration (replace with your own)
@@ -18,24 +19,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Google Sign-in
-const googleProvider = new GoogleAuthProvider();
-document.getElementById("googleSignInBtn").addEventListener("click", async () => {
-  try {
-    const result = await signInWithPopup(auth, googleProvider);
-    alert(`Welcome ${result.user.displayName}`);
-  } catch (error) {
-    alert(error.message);
-  }
-});
-
-// Facebook Sign-in
-const facebookProvider = new FacebookAuthProvider();
-document.getElementById("facebookSignInBtn").addEventListener("click", async () => {
-  try {
-    const result = await signInWithPopup(auth, facebookProvider);
-    alert(`Welcome ${result.user.displayName}`);
-  } catch (error) {
-    alert(error.message);
-  }
-});
+// Export app and auth for other JS files
+export { app, auth, GoogleAuthProvider, FacebookAuthProvider };
