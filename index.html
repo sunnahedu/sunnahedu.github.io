@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Islamic Online Learning</title>
-<link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IlmPath: Learn Islam Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-<div class="container">
-  <h1>Welcome to Sunnah Education Hub</h1>
-  <p>Learn Islam anywhere, anytime.</p>
-  <a href="login.html" class="btn">Login to Continue</a>
-</div>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-green-800 text-white p-4 flex justify-between">
+    <h1 class="text-xl font-bold">IlmPath</h1>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="courses.html" class="hover:underline">Courses</a>
+      <a href="books.html" class="hover:underline">Books</a>
+      <a href="quiz.html" class="hover:underline">Quizzes</a>
+      <a href="about.html" class="hover:underline">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-white">
+    <h2 class="text-3xl font-bold mb-2">Learn Islam Anytime, Anywhere 🌙</h2>
+    <p class="text-lg mb-4">Free courses, books, and quizzes — all in one place.</p>
+    <a href="courses.html" class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600">Start Learning →</a>
+  </section>
+
+  <!-- Featured Course -->
+  <section class="max-w-4xl mx-auto mt-10 p-4">
+    <h3 class="text-2xl font-semibold mb-4">📺 Featured Lesson</h3>
+    <div class="shadow-lg p-4 bg-white rounded-lg">
+      <iframe class="w-full h-64 rounded" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <h4 class="text-xl font-semibold mt-3">Introduction to Tawheed</h4>
+      <p>Understanding the oneness of Allah and its importance in Islam.</p>
+    </div>
+  </section>
+
+  <!-- Featured Book -->
+  <section class="max-w-4xl mx-auto mt-10 p-4">
+    <h3 class="text-2xl font-semibold mb-4">📚 Featured Book</h3>
+    <div class="shadow-lg p-4 bg-white rounded-lg flex flex-col items-center">
+      <img src="https://via.placeholder.com/150x200" alt="Tafsir Ibn Kathir" class="rounded mb-4">
+      <h4 class="text-lg font-semibold">Tafsir Ibn Kathir</h4>
+      <a href="books/tafsir_ibn_kathir.pdf" target="_blank" class="bg-green-700 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">📘 Read PDF</a>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="max-w-4xl mx-auto mt-10 p-4">
+    <h3 class="text-2xl font-semibold mb-4">🧠 Quick Quiz</h3>
+    <div class="shadow-lg p-4 bg-white rounded-lg">
+      <p class="mb-3 text-lg">Who was the first Prophet?</p>
+      <button onclick="checkAnswer(this, true)" class="bg-green-700 text-white px-4 py-2 rounded m-1">Adam (A.S)</button>
+      <button onclick="checkAnswer(this, false)" class="bg-green-700 text-white px-4 py-2 rounded m-1">Musa (A.S)</button>
+      <button onclick="checkAnswer(this, false)" class="bg-green-700 text-white px-4 py-2 rounded m-1">Nuh (A.S)</button>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswer(btn, correct) {
+      if (correct) {
+        btn.classList.remove('bg-green-700');
+        btn.classList.add('bg-green-500');
+        alert('✅ Correct! Adam (A.S) was the first Prophet.');
+      } else {
+        btn.classList.remove('bg-green-700');
+        btn.classList.add('bg-red-500');
+        alert('❌ Try again!');
+      }
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="text-center bg-green-800 text-white p-4 mt-10">
+    <p>© 2025 IlmPath | Learn Islam Online</p>
+  </footer>
+
 </body>
 </html>
