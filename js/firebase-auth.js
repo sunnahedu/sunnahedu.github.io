@@ -1,3 +1,4 @@
+// js/firebase-auth.js
 import { app, db } from "./firebase-app.js";
 import {
   getAuth,
@@ -7,7 +8,6 @@ import {
   onAuthStateChanged,
   signOut
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const auth = getAuth(app);
